@@ -1,21 +1,24 @@
-package OOPS_Programs;
+package day4;
 
-class Vehicle {
-	void start() {
-		System.out.println("Vehicle is started.");
-	}
+abstract class Vehicle1 {
+	abstract void speed();
+	abstract void brand();
 }
-
-class Car extends Vehicle {
-	void drive() {
-		System.out.println("Car is driving.");
+class Car extends Vehicle1{
+	void speed() {
+		System.out.println("speed of the car : 4km/hr");
 	}
-}
-
-public class Vehicle1 {
-	public static void main(String[] args) {
-		Car c = new Car();
-		c.start();
-		c.drive();
+	void brand() {
+		System.out.println("brand is: audi");
 	}
+    }
+
+class Bike extends Vehicle1{
+	void speed() {
+		System.out.println("speed of the bike: 10 km/hr");
+	}
+	void brand() {
+		System.out.println("brand is : Honda");
+	}
+
 }
